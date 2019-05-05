@@ -25,14 +25,14 @@ public class Calculator {
             tempNumbers2 = Integer.parseInt(num2);
         }
         catch(Exception e) {
-            System.err.println("Ошибка. Введенное значение должно быть римскими или арабскими цифрами от 1 до 10.");
+            System.err.println("Ошибка. Введены не два арабских числа.");
         }
         try {
             if ((tempNumbers1 < 1 || tempNumbers1 > 10) || (tempNumbers2 < 1 || tempNumbers2 > 10)) {
                 throw new IOException("Введите целое число от 1 до 10");
             }
         } catch(Exception e) {
-            System.out.println("Введите два арабских или римских числа больше 1 и меньше 10");
+            System.out.println("Введите два арабских или два римских числа больше 1 и меньше 10");
         }
         if ((tempNumbers1 >= 1 && tempNumbers1 <= 10) && (tempNumbers2 >= 1 && tempNumbers2 <= 10)) {
             result = String.valueOf(arithmeticCalculations(tempNumbers1, tempNumbers2));
@@ -61,6 +61,14 @@ public class Calculator {
         } else if(arabic.contains(str1) && (arabic.contains(str2))) {
             result = arabicNumbers(str1, str2);
         } else result = arabicNumbers(str1, str2);
+        try{
+            if(result.equals("null")) {
+                result = "";
+            }
+        } catch (NullPointerException e) {
+            System.out.println("В результате ввода вместе арабских и римских цифр или других значений, результат" +
+                               " вычисления программы обнуляется");
+        }
         return result;
     }
 
