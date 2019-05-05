@@ -1,75 +1,74 @@
-/**
- * Created by Василий on 01.05.2019.
- */
 public class RomeNumbers {
     public static int symbolsAndNumbers(String symbol) {
         int num = 0;
-        if(symbol.equals("I")) {
-            num = 1;
-        } else if(symbol.equals("II")) {
-            num = 2;
-        } else if(symbol.equals("III")) {
-            num = 3;
-        } else if(symbol.equals("IV")) {
-            num = 4;
-        } else if(symbol.equals("V")) {
-            num = 5;
-        } else if(symbol.equals("VI")) {
-            num = 6;
-        } else if(symbol.equals("VII")) {
-            num = 7;
-        } else if(symbol.equals("VIII")) {
-            num = 8;
-        } else if(symbol.equals("IX")) {
-            num = 9;
-        } else if(symbol.equals("X")) {
-            num = 10;
+        switch (symbol){
+            case "I": num = 1;
+                break;
+            case "II": num =  2;
+                break;
+            case "III": num = 3;
+                break;
+            case "IV": num = 4;
+                break;
+            case "V": num = 5;
+                break;
+            case "VI": num = 6;
+                break;
+            case "VII": num = 7;
+                break;
+            case "VIII": num = 8;
+                break;
+            case "IX": num = 9;
+                break;
+            case "X": num = 10;
+                break;
         }
         return num;
     }
 
     public static String numbersAndSymbol(int number) {
         String romeNumber = null;
-        if(number == 1) {
-            romeNumber = "I";
-        } else if(number == 2) {
-            romeNumber = "II";
-        } else if(number == 3) {
-            romeNumber = "III";
-        } else if(number == 4) {
-            romeNumber = "IV";
-        } else if(number == 5) {
-            romeNumber = "V";
-        } else if(number == 6) {
-            romeNumber = "VI";
-        } else if(number == 7) {
-            romeNumber = "VII";
-        } else if(number == 8) {
-            romeNumber = "VIII";
-        } else if(number == 9) {
-            romeNumber = "IX";
-        } else if(number == 10) {
-            romeNumber = "X";
-        } else if(number == 11) {
-            romeNumber = "XI";
-        } else if(number == 12) {
-            romeNumber = "XII";
-        } else if(number == 13) {
-            romeNumber = "XIII";
-        } else if(number == 14) {
-            romeNumber = "XIV";
-        } else if(number == 15) {
-            romeNumber = "XV";
-        } else if(number == 16) {
-            romeNumber = "XVI";
-        } else if(number == 17) {
-            romeNumber = "XVII";
-        } else if(number == 18) {
-            romeNumber = "XVIII";
-        } else if(number == 19) {
-            romeNumber = "XIX";
-        } else if(number == 20) {
-            romeNumber = "XX";
+        switch (number) {
+            case 1: romeNumber = "I";
+                break;
+            case 2: romeNumber = "II";
+                break;
+            case 3: romeNumber = "III";
+                break;
+            case 4: romeNumber = "IV";
+                break;
+            case 5: romeNumber = "V";
+                break;
+            case 6: romeNumber = "VI";
+                break;
+            case 7: romeNumber = "VII";
+                break;
+            case 8: romeNumber = "VIII";
+                break;
+            case 9: romeNumber = "IX";
+                break;
+            case 10: romeNumber = "X";
+                break;
+            case 11: romeNumber = "XI";
+                break;
+            case 12: romeNumber = "XII";
+                break;
+            case 13: romeNumber = "XIII";
+                break;
+            case 14: romeNumber = "XIV";
+                break;
+            case 15: romeNumber = "XV";
+                break;
+            case 16: romeNumber = "XVI";
+                break;
+            case 17: romeNumber = "XVII";
+                break;
+            case 18: romeNumber = "XVIII";
+                break;
+            case 19: romeNumber = "XIX";
+                break;
+            case 20: romeNumber = "XX";
+                break;
         }
         return romeNumber;
     }
